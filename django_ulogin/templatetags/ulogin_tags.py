@@ -33,7 +33,7 @@ def get_redirect_url(request):
 
     return urlquote("{request_url}?{query_string}".format(
         request_url=request.build_absolute_uri(r('ulogin_postback')),
-        query_string=smart_unicode(urllib.unquote(qs))
+        query_string=qs
     ))
 
 
